@@ -77,5 +77,5 @@ def process_folder(folder):
                 process_office_file(full_path)
 
 if __name__ == "__main__":
-    folder_path = r"k:\DOP\OED\METHOD&TOOLS\3 - PROJECTS\1 - COMPLETED\4 - STANDARDS\2 - 5S CHECK LIST"
+    folder_path = r"k:\DOP\OED\METHOD&TOOLS\3 - PROJECTS\1 - COMPLETED\4 - STANDARDS\6 - VS"
     process_folder(folder_path)
