@@ -75,5 +75,5 @@ def process_folder(folder, quality='ebook'):
                 compress_pdf_ghostscript(full_path, compressed_path, quality=quality)
 
 if __name__ == "__main__":
-    folder_path = r"k:\DOP\OED"  # Укажи путь к папке с PDF
+    folder_path = r"k:/EXCHANGE/Yevgeniy Karabekov/"  # Укажи путь к папке с PDF
     process_folder(folder_path, quality='ebook')
