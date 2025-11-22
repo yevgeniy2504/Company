@@ -26,9 +26,6 @@ logger = logging.getLogger(__name__)
 
 
 def save_df_to_csv(df, filename, folder='output', index=False, encoding='utf-8-sig', decimal=','):
-    """
-    Сохраняет DataFrame в CSV; пробрасывает CsvSaveError.
-    """
     try:
         os.makedirs(folder, exist_ok=True)
         path = os.path.join(folder, filename)
