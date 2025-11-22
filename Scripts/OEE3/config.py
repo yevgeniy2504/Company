@@ -1,11 +1,11 @@
-driver = 'ODBC Driver 17 for SQL Server'
+DRIVER = "ODBC Driver 17 for SQL Server"
+SERVER = "BKZTKDSDB41,21433"
+
+DATABASE_1 = "PIFD"
+DATABASE_2 = "acqkzdem1"
 
 
-server = 'BKZTKDSDB41,21433'
-
-database_1 = 'PIFD'
-
-query_1 = """
+QUERY_1 = """
 SELECT 
     AFE.name COLLATE DATABASE_DEFAULT AS [equipment],
     AFET.name COLLATE DATABASE_DEFAULT AS [event],
@@ -35,10 +35,7 @@ AND AFE.id IN (
 )
 """
 
-database_2 = 'acqkzdem1'
-
-
-query_2 = """
+QUERY_2 = """
 SELECT
     HOLEID,
     DrillCompany,
@@ -47,7 +44,8 @@ SELECT
     HoleStatus,
     ENDDATE,
     CASE 
-        WHEN TRY_CAST([InvoiceDepth] AS FLOAT) IS NOT NULL AND TRY_CAST([InvoiceDepth] AS FLOAT) > 0 
+        WHEN TRY_CAST([InvoiceDepth] AS FLOAT) IS NOT NULL 
+            AND TRY_CAST([InvoiceDepth] AS FLOAT) > 0 
             THEN CAST([InvoiceDepth] AS FLOAT)
         ELSE [DEPTH]
     END AS DEPTH
