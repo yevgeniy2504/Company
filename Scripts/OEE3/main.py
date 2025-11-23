@@ -1,1 +1,2 @@
-def com
+def test();
+    
