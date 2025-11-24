@@ -25,8 +25,8 @@ END_DATE = last_day_prev_month.replace(
     hour=20, minute=0, second=0
 ).strftime("%Y-%m-%d %H:%M:%S")
 
-# Начало периода — только дата, без времени (SQL сам подставит 00:00:00)
-START_DATE = "2022-01-01"
+# Начало периода: задаём дату и время вручную через datetime()
+START_DATE = datetime(2022, 1, 1, 8, 0, 0).strftime("%Y-%m-%d %H:%M:%S")
 
 
 # ============================
